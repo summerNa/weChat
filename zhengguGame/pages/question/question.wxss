@@ -1,0 +1,23 @@
+/* pages/question/question.wxss */
+.container {
+  padding: 40rpx 0px;
+}
+.question {
+  width: 80%;
+  font-size: 36rpx;
+  text-align: left;
+  margin-bottom: 80rpx;
+  font-weight: bold;
+}
+.option {
+  width: 590rpx;
+  /* height: 140rpx; */
+  border: 4rpx solid #f8e71c;
+  border-radius: 8rpx;
+  text-align: center;
+  /* line-height: 140rpx; */
+  padding: 36rpx 0rpx;
+  font-size: 36rpx;
+  margin-bottom: 40rpx;
+  font-weight: bold;
+}

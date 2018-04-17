@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/route/route",
+    "pages/answer/answer",
+    "pages/code/code",
+    "pages/contact/contact",
+    "pages/question/question",
+    "pages/index/index",
+    "pages/index2/index2",
+    "pages/result/result",
+    "pages/logs/logs" 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "斯纳德六角形行为分析",
+    "navigationBarTextStyle": "black"
+  }
+}

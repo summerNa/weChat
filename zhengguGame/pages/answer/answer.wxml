@@ -1,0 +1,63 @@
+<!--pages/answer/answer.wxml-->
+<view class='wrap'>
+  <view class="usermotto2" bindtap="show">
+      <button class='aa' disabled='{{btn_flag}}'>{{btn_text}}</button>
+   </view> 
+  <view class="title">
+    <text>你收到的测试答案</text>
+  </view>
+  <view wx:if="{{!flag}}" class="key" bindtap="payment">
+    <image src="../../images/key.png"></image>
+    <text class='money'>支付￥3解锁全部答案</text>
+  </view>
+  <view class='con'>
+    <block wx:for="{{answer_list}}" wx:for-index="index" wx:for-item="item">
+      <view class="list">
+        <view class="person">
+          <image class='img' src="{{item.headimgurl}}" alt=""></image>
+          <text class='nickname'>{{item.nickname}}</text>
+        </view>
+        <view class="question">
+          <block wx:for="{{question}}" wx:for-index="index_q" wx:for-item="item1">
+            <view class="item">
+              <view>
+                <text class="Q">{{item1}}</text>
+              </view>
+              <block wx:for="{{item.answers}}" wx:for-index="index_a" wx:for-item="item2">
+                <block wx:if="{{index_q == index_a}}">
+                  <block wx:if="{{total-index<=3}}">
+                    <text wx:if="{{option[index_q][item2]}}" class="A">{{option[index_q][item2]}}</text>
+                    <text wx:elif="{{!option[index_q][item2]}}" class="A">{{option[index_q][0]}}</text>
+                  </block>
+                  <block wx:else>
+                    <text wx:if="{{option[index_q][item2] && flag}}" class="A">{{option[index_q][item2]}}</text>
+                    <text wx:elif="{{!option[index_q][item2] && flag}}" class="A">{{option[index_q][0]}}</text>
+                    <view wx:elif="{{!flag}}" class='suo' bindtap="payment">
+                      <image src="../../images/suo.png"></image>
+                      <text class="info">需解锁查看</text>
+                    </view>
+                  </block>
+                </block>
+              </block>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
+<view class="modal-box" hidden="{{flag2}}" catchtap='hide2'>
+  <view class="modal-body">
+    <view class="modal-content" catchtap='catch'>
+      <view class='input'>
+        <view class='please'>请输入您的手机号</view>
+        <view class='tip'>好友上当后，我们将免费发短信提醒您</view>
+        <input bindinput="phoneInput" placeholder=""/>
+        <view><button bindtap="hide" class="sure">确定</button></view>
+      </view>
+    </view>
+  </view>
+</view>

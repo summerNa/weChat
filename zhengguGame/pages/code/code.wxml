@@ -1,0 +1,39 @@
+<!--pages/code/code.wxml-->
+<view class="container">
+  <image class="userinfo-avatar" src="{{imgUrl}}"></image>
+  <!-- <view class='tt'>
+    <text class='tips'>转发朋友圈无效，保存图片转发到微信群和好友</text>
+  </view> -->
+  <view bindtap="save" class="usermotto">
+    <button class="user-motto">保存图片，整蛊好友</button>
+  </view>
+  <view class="usermotto2" bindtap="show">
+    <button class='aa' disabled='{{btn_flag}}'>{{btn_text}}</button>
+  </view>
+  <view bindtap="tousu" class="tousu">
+    <text class="user-motto">举报&投诉</text>
+  </view>
+</view>
+<view class="modal-box" hidden="{{flag}}" catchtap='hide2'>
+  <view class="modal-body">
+    <view class="modal-content" catchtap='catch'>
+      <view class='input'>
+        <view class='please'>请输入您的手机号</view>
+        <view class='tip'>好友上当后，我们将免费发短信提醒您</view>
+        <input bindinput="phoneInput" placeholder=""/>
+        <view><button bindtap="hide" class="sure">确定</button></view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="modal-box" hidden="{{flag_tousu}}" catchtap='hide3'>
+  <view class="modal-body">
+    <view class="modal-content2 con2" catchtap='catch'>
+      <view class='input'>
+        <view class='please'>请您填写举报内容</view>
+        <textarea value="{{text_tousu}}"></textarea>
+        <view><button bindtap="tijiao" class="sure tijiao">提交</button></view>
+      </view>
+    </view>
+  </view>
+</view>

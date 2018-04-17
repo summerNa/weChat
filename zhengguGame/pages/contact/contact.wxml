@@ -1,0 +1,32 @@
+<!--pages/contact/contact.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block>
+       <image class="userinfo-avatar" src="/images/laugh.jpg" background-size="cover"></image> 
+    </block>
+  </view>
+  <view class='gameInfo gameTop'>
+    <text class='info'>有人上当了~</text>
+  </view>
+  <view class="usermotto2" bindtap="look_answer">
+    <button class="user-motto">立即查看</button>
+  </view>
+  <view class="usermotto3" bindtap="show">
+    <button class='aa' disabled='{{btn_flag}}'>{{btn_text}}</button>
+  </view>
+  <view class="modal-box" hidden="{{flag}}" catchtap='hide2'>
+    <view class="modal-body">
+      <view class="modal-content" catchtap='catch'>
+        <view class='input'>
+          <view class='please'>请输入您的手机号</view>
+          <view class='tip'>好友上当后，我们将免费发短信提醒您</view>
+          <input bindinput="phoneInput" placeholder="" />
+          <view>
+            <button bindtap="hide" class="sure">确定</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

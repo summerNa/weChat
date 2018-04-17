@@ -1,0 +1,20 @@
+<!--index2.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block>
+      <image bindtap="startGame2" class="userinfo-avatar" src="/images/person1.png" background-size="cover"></image>
+    </block>
+  </view>
+  <view class='gameInfo gameTop'>
+    <text class='info'>这是来自斯纳德六角形行为分析 </text>
+  </view>
+  <view class='gameInfo'>
+    <text class='info'>请释放你潜藏的人格, 如实作答 </text>
+  </view>
+  <view class='gameInfo top'>
+    <text class='info'>我们将把最真实的人格还给你</text>
+  </view>
+  <view bindtap="start" class="usermotto2">
+    <button class="user-motto">开始</button>
+  </view>
+</view>

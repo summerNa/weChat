@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+<form report-submit="true" bindsubmit="formSubmit" bindreset="formReset">
+  <view class="userinfo">
+    <block>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </block>
+  </view>
+  <view class='gameInfo gameTop'>
+     <text class='info tt'>把测试发给好友</text> 
+  </view>
+  <view class='gameInfo'>
+    <text class='info'>TA们的回答都会显示在这里</text>
+  </view>
+   <view class="usermotto"> 
+    <button formType="submit" class="user-motto">发起整蛊</button>
+   </view> 
+   <view class="usermotto2" bindtap="look_answer">
+      <button class='aa'>立即查看答案</button>
+   </view> 
+   <view bindtap="tousu" class="usermotto2 tousu">
+    <text class="user-motto">举报&投诉</text>
+   </view>
+</form>
+</view>
+<view class="modal-box" hidden="{{flag_tousu}}" catchtap='hide3'>
+  <view class="modal-body">
+    <view class="modal-content con2" catchtap='catch'>
+      <view class='input'>
+        <view class='please'>请您填写举报内容</view>
+        <textarea value="{{text_tousu}}"></textarea>
+        <view><button bindtap="tijiao" class="sure tijiao">提交</button></view>
+      </view>
+    </view>
+  </view>
+</view>

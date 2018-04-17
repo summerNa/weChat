@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block>
+       <image class="userinfo-avatar" src="/images/laugh.jpg" background-size="cover"></image> 
+    </block>
+  </view>
+  <view class='gameInfo gameTop'>
+    <text class='info'>不好意思，你上当了!</text>
+  </view>
+  <view class='gameInfo'>
+    <text class='info'>你的答案都发到你好友那边去了~</text>
+  </view>
+  <view class="trick">
+    <text>愚人节要提前过！因为当天大家警觉心都很高😂</text>
+  </view>
+  <view bindtap="startGame" class="usermotto2">
+    <button class="user-motto">我也要整好友</button>
+  </view>
+</view>

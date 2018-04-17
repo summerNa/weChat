@@ -1,0 +1,11 @@
+<!--pages/question/question.wxml-->
+<view class="container">
+  <view class="question">
+    <text>{{Q_index+1}} {{question[Q_index]}}</text>
+  </view>
+  <block wx:for="{{option[Q_index]}}">
+    <view class="option" id="{{index}}" bindtap="select"> 
+      <text>{{item}}</text> 
+    </view>
+  </block>
+</view>
